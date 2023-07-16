@@ -1,0 +1,15 @@
+<configuration>
+	<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%-5level %-30(%d) [%.10thread] %logger{32} - %msg %n</pattern>
+		</encoder>
+	</appender>
+
+	<logger name="org.springframework" level="INFO" />
+	<logger name="org.springframework.web.servlet.mvc.method.annotation" level="ERROR" />
+	<logger name="se.emirbuc" level="ALL" />
+
+	<root level="DEBUG">
+		<appender-ref ref="CONSOLE" />
+	</root>
+</configuration>
